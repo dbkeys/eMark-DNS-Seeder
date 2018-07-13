@@ -525,7 +525,7 @@ int main(int argc, char **argv) {
   }
   pthread_t threadDns, threadSeed, threadDump, threadStats;
   if (fDNS) {
-    printf("Starting %i DNS threads for %s on %s (port %i)...", opts.nDnsThreads, opts.host, opts.ns, opts.nPort);
+    printf("Starting %i DNS threads for sub-domain: %s on %s (port %i)...", opts.nDnsThreads, opts.host, opts.ns, opts.nPort);
     dnsThread.clear();
     for (int i=0; i<opts.nDnsThreads; i++) {
       dnsThread.push_back(new CDnsThread(&opts, i));
